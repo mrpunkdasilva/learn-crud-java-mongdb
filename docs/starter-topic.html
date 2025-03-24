@@ -1,0 +1,331 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-03-24T15:44:16.535590601"><title>Learn CRUD Java With MongoDB | Learn CRUD Java With MongoDB</title><script type="application/json" id="virtual-toc-data">[{"id":"introdu-o-ao-mongodb-com-java","level":0,"title":"Introdução ao MongoDB com Java","anchor":"#introdu-o-ao-mongodb-com-java"},{"id":"passo-1-configurar-seu-projeto","level":0,"title":"Passo 1: Configurar Seu Projeto","anchor":"#passo-1-configurar-seu-projeto"},{"id":"passo-2-conectar-ao-mongodb","level":0,"title":"Passo 2: Conectar ao MongoDB","anchor":"#passo-2-conectar-ao-mongodb"},{"id":"passo-3-criar-documentos","level":0,"title":"Passo 3: Criar Documentos","anchor":"#passo-3-criar-documentos"},{"id":"passo-4-ler-documentos","level":0,"title":"Passo 4: Ler Documentos","anchor":"#passo-4-ler-documentos"},{"id":"passo-5-atualizar-documentos","level":0,"title":"Passo 5: Atualizar Documentos","anchor":"#passo-5-atualizar-documentos"},{"id":"passo-6-deletar-documentos","level":0,"title":"Passo 6: Deletar Documentos","anchor":"#passo-6-deletar-documentos"},{"id":"passo-7-recursos-avan-ados","level":0,"title":"Passo 7: Recursos Avançados","anchor":"#passo-7-recursos-avan-ados"},{"id":"exemplo-completo","level":0,"title":"Exemplo Completo","anchor":"#exemplo-completo"},{"id":"boas-pr-ticas","level":0,"title":"Boas Práticas","anchor":"#boas-pr-ticas"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b725/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Learn CRUD Java With MongoDB | Learn CRUD Java With MongoDB"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Learn CRUD Java With MongoDB Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/starter-topic.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Learn CRUD Java With MongoDB | Learn CRUD Java With MongoDB"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/starter-topic.html#webpage",
+    "url": "writerside-documentation/starter-topic.html",
+    "name": "Learn CRUD Java With MongoDB | Learn CRUD Java With MongoDB",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Learn CRUD Java With MongoDB Help"
+}</script><!-- End Schema.org --></head><body data-id="starter-topic" data-main-title="Learn CRUD Java With MongoDB" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Learn CRUD Java With MongoDB  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="starter-topic" id="starter-topic.md">Learn CRUD Java With MongoDB</h1><section class="chapter"><h2 id="introdu-o-ao-mongodb-com-java" data-toc="introdu-o-ao-mongodb-com-java">Introdu&ccedil;&atilde;o ao MongoDB com Java</h2><p id="-mowv7o_13">Bem-vindo a este tutorial pr&aacute;tico onde voc&ecirc; aprender&aacute; a realizar opera&ccedil;&otilde;es CRUD (Create, Read, Update, Delete) no MongoDB usando o driver Java. Ao final, voc&ecirc; ser&aacute; capaz de construir aplica&ccedil;&otilde;es Java que interagem com bancos de dados MongoDB.</p><section class="chapter"><h3 id="pr-requisitos" data-toc="pr-requisitos">Pr&eacute;-requisitos</h3><ul class="list _bullet" id="-mowv7o_15"><li class="list__item" id="-mowv7o_16"><p id="-mowv7o_20">Conhecimento b&aacute;sico de Java</p></li><li class="list__item" id="-mowv7o_17"><p id="-mowv7o_21">MongoDB instalado localmente (porta padr&atilde;o 27017)</p></li><li class="list__item" id="-mowv7o_18"><p id="-mowv7o_22">Java Development Kit (JDK) 8 ou superior</p></li><li class="list__item" id="-mowv7o_19"><p id="-mowv7o_23">Maven ou Gradle para gerenciamento de depend&ecirc;ncias</p></li></ul></section></section><section class="chapter"><h2 id="passo-1-configurar-seu-projeto" data-toc="passo-1-configurar-seu-projeto">Passo 1: Configurar Seu Projeto</h2><p id="-mowv7o_24">Primeiro, adicione o driver Java do MongoDB ao seu projeto:</p><p id="-mowv7o_25"><span class="control" id="-mowv7o_29">Maven:</span></p><div class="code-block" data-lang="markup">
+&lt;dependency&gt;
+    &lt;groupId&gt;org.mongodb&lt;/groupId&gt;
+    &lt;artifactId&gt;mongodb-driver-sync&lt;/artifactId&gt;
+    &lt;version&gt;4.9.0&lt;/version&gt;
+&lt;/dependency&gt;
+</div><p id="-mowv7o_27"><span class="control" id="-mowv7o_30">Gradle:</span></p><div class="code-block" data-lang="groovy">
+implementation 'org.mongodb:mongodb-driver-sync:4.9.0'
+</div></section><section class="chapter"><h2 id="passo-2-conectar-ao-mongodb" data-toc="passo-2-conectar-ao-mongodb">Passo 2: Conectar ao MongoDB</h2><p id="-mowv7o_31">Crie uma nova classe Java <code class="code" id="-mowv7o_33">MongoCRUD.java</code> e adicione o c&oacute;digo de conex&atilde;o:</p><div class="code-block" data-lang="java">
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+
+public class MongoCRUD {
+    private MongoClient mongoClient;
+    
+    public MongoCRUD() {
+        // Conectar ao MongoDB rodando localmente
+        this.mongoClient = MongoClients.create(&quot;mongodb://localhost:27017&quot;);
+        System.out.println(&quot;Conectado ao MongoDB com sucesso!&quot;);
+    }
+    
+    public void close() {
+        mongoClient.close();
+        System.out.println(&quot;Conexão encerrada.&quot;);
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            // Nossas operações virão aqui
+        } finally {
+            mongoApp.close();
+        }
+    }
+}
+</div></section><section class="chapter"><h2 id="passo-3-criar-documentos" data-toc="passo-3-criar-documentos">Passo 3: Criar Documentos</h2><p id="-mowv7o_34">Vamos adicionar um m&eacute;todo para inserir dados na cole&ccedil;&atilde;o &quot;pessoas&quot;:</p><div class="code-block" data-lang="java">
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+import java.util.Arrays;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    private MongoDatabase database;
+    private MongoCollection&lt;Document&gt; collection;
+    
+    public MongoCRUD() {
+        this.mongoClient = MongoClients.create(&quot;mongodb://localhost:27017&quot;);
+        this.database = mongoClient.getDatabase(&quot;lab_mongodb&quot;);
+        this.collection = database.getCollection(&quot;pessoas&quot;);
+    }
+    
+    public void criarDocumentos() {
+        System.out.println(&quot;\n=== Criando Documentos ===&quot;);
+        
+        // Inserção de documento único
+        Document pessoa1 = new Document(&quot;nome&quot;, &quot;João Silva&quot;)
+                .append(&quot;idade&quot;, 28)
+                .append(&quot;cidade&quot;, &quot;São Paulo&quot;);
+        collection.insertOne(pessoa1);
+        System.out.println(&quot;Documento 1 inserido: &quot; + pessoa1);
+        
+        // Inserção de múltiplos documentos
+        Document pessoa2 = new Document(&quot;nome&quot;, &quot;Maria Oliveira&quot;)
+                .append(&quot;idade&quot;, 32)
+                .append(&quot;cidade&quot;, &quot;Rio de Janeiro&quot;);
+                
+        Document pessoa3 = new Document(&quot;nome&quot;, &quot;Carlos Souza&quot;)
+                .append(&quot;idade&quot;, 25)
+                .append(&quot;cidade&quot;, &quot;Belo Horizonte&quot;);
+                
+        collection.insertMany(Arrays.asList(pessoa2, pessoa3));
+        System.out.println(&quot;Mais 2 documentos inseridos&quot;);
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            mongoApp.criarDocumentos();
+        } finally {
+            mongoApp.close();
+        }
+    }
+}
+</div></section><section class="chapter"><h2 id="passo-4-ler-documentos" data-toc="passo-4-ler-documentos">Passo 4: Ler Documentos</h2><p id="-mowv7o_36">Adicione capacidades de consulta &agrave; sua aplica&ccedil;&atilde;o:</p><div class="code-block" data-lang="java">
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Projections;
+import org.bson.conversions.Bson;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    public void lerDocumentos() {
+        System.out.println(&quot;\n=== Lendo Documentos ===&quot;);
+        
+        // 1. Encontrar todos os documentos
+        System.out.println(&quot;Todos os documentos:&quot;);
+        collection.find().forEach(doc -&gt; System.out.println(doc.toJson()));
+        
+        // 2. Encontrar com filtro (idade &gt; 25)
+        System.out.println(&quot;\nPessoas com mais de 25 anos:&quot;);
+        Bson filtroIdade = Filters.gt(&quot;idade&quot;, 25);
+        collection.find(filtroIdade)
+                 .forEach(doc -&gt; System.out.println(doc.toJson()));
+        
+        // 3. Projeção (apenas nome e cidade)
+        System.out.println(&quot;\nApenas nomes e cidades:&quot;);
+        Bson projecao = Projections.fields(
+            Projections.include(&quot;nome&quot;, &quot;cidade&quot;),
+            Projections.excludeId()
+        );
+        collection.find()
+                 .projection(projecao)
+                 .forEach(doc -&gt; System.out.println(doc.toJson()));
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            mongoApp.criarDocumentos();
+            mongoApp.lerDocumentos();
+        } finally {
+            mongoApp.close();
+        }
+    }
+}
+</div></section><section class="chapter"><h2 id="passo-5-atualizar-documentos" data-toc="passo-5-atualizar-documentos">Passo 5: Atualizar Documentos</h2><p id="-mowv7o_38">Implemente atualiza&ccedil;&otilde;es de documentos:</p><div class="code-block" data-lang="java">
+import com.mongodb.client.model.Updates;
+import com.mongodb.client.result.UpdateResult;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    public void atualizarDocumentos() {
+        System.out.println(&quot;\n=== Atualizando Documentos ===&quot;);
+        
+        // 1. Atualizar um documento
+        Bson filtro = Filters.eq(&quot;nome&quot;, &quot;João Silva&quot;);
+        Bson atualizacao = Updates.set(&quot;profissao&quot;, &quot;Engenheiro&quot;);
+        UpdateResult resultado = collection.updateOne(filtro, atualizacao);
+        System.out.println(resultado.getModifiedCount() + &quot; documento(s) modificado(s)&quot;);
+        
+        // 2. Atualizar múltiplos documentos
+        Bson filtroIdade = Filters.gt(&quot;idade&quot;, 25);
+        Bson atualizacaoSalario = Updates.inc(&quot;salario&quot;, 500.00);
+        UpdateResult resultadoMultiplo = collection.updateMany(filtroIdade, atualizacaoSalario);
+        System.out.println(resultadoMultiplo.getModifiedCount() + &quot; documentos atualizados com aumento salarial&quot;);
+        
+        // 3. Atualização complexa (definir se não existir)
+        Bson atualizacaoComplexa = Updates.combine(
+            Updates.set(&quot;profissao&quot;, &quot;Desenvolvedor&quot;),
+            Updates.setOnInsert(&quot;data_criacao&quot;, new java.util.Date())
+        );
+        collection.updateOne(Filters.eq(&quot;nome&quot;, &quot;Carlos Souza&quot;), atualizacaoComplexa);
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            mongoApp.criarDocumentos();
+            mongoApp.lerDocumentos();
+            mongoApp.atualizarDocumentos();
+            mongoApp.lerDocumentos(); // Verificar atualizações
+        } finally {
+            mongoApp.close();
+        }
+    }
+}
+</div></section><section class="chapter"><h2 id="passo-6-deletar-documentos" data-toc="passo-6-deletar-documentos">Passo 6: Deletar Documentos</h2><p id="-mowv7o_40">Adicione m&eacute;todos de exclus&atilde;o:</p><div class="code-block" data-lang="java">
+import com.mongodb.client.result.DeleteResult;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    public void deletarDocumentos() {
+        System.out.println(&quot;\n=== Deletando Documentos ===&quot;);
+        
+        // 1. Deletar um documento
+        Bson filtro = Filters.eq(&quot;nome&quot;, &quot;Carlos Souza&quot;);
+        DeleteResult resultado = collection.deleteOne(filtro);
+        System.out.println(resultado.getDeletedCount() + &quot; documento(s) deletado(s)&quot;);
+        
+        // 2. Deletar múltiplos documentos
+        Bson filtroIdade = Filters.lt(&quot;idade&quot;, 30);
+        DeleteResult resultadoMultiplo = collection.deleteMany(filtroIdade);
+        System.out.println(resultadoMultiplo.getDeletedCount() + &quot; documentos deletados onde idade &lt; 30&quot;);
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            mongoApp.criarDocumentos();
+            mongoApp.lerDocumentos();
+            mongoApp.atualizarDocumentos();
+            mongoApp.deletarDocumentos();
+            mongoApp.lerDocumentos(); // Verificar exclusões
+        } finally {
+            mongoApp.close();
+        }
+    }
+}
+</div></section><section class="chapter"><h2 id="passo-7-recursos-avan-ados" data-toc="passo-7-recursos-avan-ados">Passo 7: Recursos Avan&ccedil;ados</h2><section class="chapter"><h3 id="indexa-o" data-toc="indexa-o">Indexa&ccedil;&atilde;o</h3><div class="code-block" data-lang="java">
+import com.mongodb.client.model.Indexes;
+import com.mongodb.client.model.IndexOptions;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    public void gerenciarIndices() {
+        System.out.println(&quot;\n=== Gerenciando Índices ===&quot;);
+        
+        // 1. Criar índice único no nome
+        collection.createIndex(
+            Indexes.ascending(&quot;nome&quot;),
+            new IndexOptions().unique(true)
+        );
+        System.out.println(&quot;Índice único criado em 'nome'&quot;);
+        
+        // 2. Criar índice composto
+        collection.createIndex(
+            Indexes.compoundIndex(
+                Indexes.ascending(&quot;cidade&quot;),
+                Indexes.descending(&quot;idade&quot;)
+            )
+        );
+        System.out.println(&quot;Índice composto criado em cidade e idade&quot;);
+        
+        // 3. Listar todos os índices
+        System.out.println(&quot;\nÍndices atuais:&quot;);
+        collection.listIndexes().forEach(idx -&gt; System.out.println(idx.toJson()));
+    }
+}
+</div></section><section class="chapter"><h3 id="agrega-o" data-toc="agrega-o">Agrega&ccedil;&atilde;o</h3><div class="code-block" data-lang="java">
+import com.mongodb.client.model.Accumulators;
+import com.mongodb.client.model.Aggregates;
+import com.mongodb.client.model.Sorts;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    public void exemplosAgregacao() {
+        System.out.println(&quot;\n=== Exemplos de Agregação ===&quot;);
+        
+        // 1. Média de idade por cidade
+        System.out.println(&quot;\nMédia de idade por cidade:&quot;);
+        collection.aggregate(Arrays.asList(
+            Aggregates.group(&quot;$cidade&quot;, 
+                Accumulators.avg(&quot;mediaIdade&quot;, &quot;$idade&quot;),
+                Accumulators.sum(&quot;contagem&quot;, 1)
+            ),
+            Aggregates.sort(Sorts.ascending(&quot;_id&quot;))
+        ).forEach(doc -&gt; System.out.println(doc.toJson()));
+        
+        // 2. Estatísticas salariais por profissão
+        System.out.println(&quot;\nEstatísticas salariais por profissão:&quot;);
+        collection.aggregate(Arrays.asList(
+            Aggregates.group(&quot;$profissao&quot;,
+                Accumulators.avg(&quot;salarioMedio&quot;, &quot;$salario&quot;),
+                Accumulators.min(&quot;salarioMinimo&quot;, &quot;$salario&quot;),
+                Accumulators.max(&quot;salarioMaximo&quot;, &quot;$salario&quot;)
+            ),
+            Aggregates.sort(Sorts.descending(&quot;salarioMedio&quot;))
+        )).forEach(doc -&gt; System.out.println(doc.toJson()));
+    }
+}
+</div></section></section><section class="chapter"><h2 id="exemplo-completo" data-toc="exemplo-completo">Exemplo Completo</h2><p id="-mowv7o_46">Aqui est&aacute; a classe completa com todas as opera&ccedil;&otilde;es:</p><div class="code-block" data-lang="java">
+import com.mongodb.client.*;
+import com.mongodb.client.model.*;
+import com.mongodb.client.result.*;
+import org.bson.Document;
+import org.bson.conversions.Bson;
+import java.util.Arrays;
+
+public class MongoCRUD {
+    private MongoClient mongoClient;
+    private MongoDatabase database;
+    private MongoCollection&lt;Document&gt; collection;
+    
+    public MongoCRUD() {
+        this.mongoClient = MongoClients.create(&quot;mongodb://localhost:27017&quot;);
+        this.database = mongoClient.getDatabase(&quot;lab_mongodb&quot;);
+        this.collection = database.getCollection(&quot;pessoas&quot;);
+        System.out.println(&quot;Conexão com MongoDB estabelecida&quot;);
+    }
+    
+    // Todos os métodos que criamos acima...
+    public void criarDocumentos() { /* ... */ }
+    public void lerDocumentos() { /* ... */ }
+    public void atualizarDocumentos() { /* ... */ }
+    public void deletarDocumentos() { /* ... */ }
+    public void gerenciarIndices() { /* ... */ }
+    public void exemplosAgregacao() { /* ... */ }
+    
+    public void close() {
+        mongoClient.close();
+        System.out.println(&quot;Conexão encerrada&quot;);
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            mongoApp.criarDocumentos();
+            mongoApp.lerDocumentos();
+            mongoApp.atualizarDocumentos();
+            mongoApp.lerDocumentos();
+            mongoApp.deletarDocumentos();
+            mongoApp.lerDocumentos();
+            mongoApp.gerenciarIndices();
+            mongoApp.exemplosAgregacao();
+        } finally {
+            mongoApp.close();
+        }
+    }
+}
+</div></section><section class="chapter"><h2 id="boas-pr-ticas" data-toc="boas-pr-ticas">Boas Pr&aacute;ticas</h2><ol class="list _decimal" id="-mowv7o_48" type="1"><li class="list__item" id="-mowv7o_49"><p id="-mowv7o_54"><span class="control" id="-mowv7o_55">Gerenciamento de Conex&atilde;o</span>: Sempre feche seu MongoClient quando terminar</p></li><li class="list__item" id="-mowv7o_50"><p id="-mowv7o_56"><span class="control" id="-mowv7o_57">Opera&ccedil;&otilde;es em Massa</span>: Para m&uacute;ltiplas escritas, use opera&ccedil;&otilde;es em massa</p></li><li class="list__item" id="-mowv7o_51"><p id="-mowv7o_58"><span class="control" id="-mowv7o_59">Proje&ccedil;&otilde;es</span>: Recupere apenas os campos que voc&ecirc; precisa</p></li><li class="list__item" id="-mowv7o_52"><p id="-mowv7o_60"><span class="control" id="-mowv7o_61">Tratamento de Erros</span>: Adicione blocos try-catch adequados em c&oacute;digo de produ&ccedil;&atilde;o</p></li><li class="list__item" id="-mowv7o_53"><p id="-mowv7o_62"><span class="control" id="-mowv7o_63">Indexa&ccedil;&atilde;o</span>: Crie &iacute;ndices para seus padr&otilde;es de consulta comuns</p></li></ol></section><div class="last-modified">Last modified: 24 março 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="explicacao.html" class="navigation-links__next">Como Tudo Funciona</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b725/app.js"></script></body></html>

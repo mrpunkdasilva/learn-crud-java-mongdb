@@ -1,0 +1,585 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-groovy.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .header-row {
+            background: #e6e6e6;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .table-wrapper {
+            overflow: hidden;
+            box-sizing: border-box;
+            font: inherit;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceLCJWM</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of Contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-512279951">Learn CRUD Java With MongoDB</a></div><div class="page">2</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-732844359">Como Tudo Funciona</a></div><div class="page">13</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-512279951">Learn CRUD Java With MongoDB</h1><section class="detached"><h2 id="-512279951#introdu-o-ao-mongodb-com-java" data-toc="introdu-o-ao-mongodb-com-java#starter-topic.md-introdu-o-ao-mongodb-com-java">Introdu&ccedil;&atilde;o ao MongoDB com Java</h2><p id="-512279951#-mowv7o_13">Bem-vindo a este tutorial pr&aacute;tico onde voc&ecirc; aprender&aacute; a realizar opera&ccedil;&otilde;es CRUD (Create, Read, Update, Delete) no MongoDB usando o driver Java. Ao final, voc&ecirc; ser&aacute; capaz de construir aplica&ccedil;&otilde;es Java que interagem com bancos de dados MongoDB.</p><section class="detached"><h3 id="-512279951#pr-requisitos" data-toc="pr-requisitos#starter-topic.md-pr-requisitos">Pr&eacute;-requisitos</h3><ul class="list" id="-512279951#-mowv7o_15" start="1"><li class="list-item" id="-512279951#-mowv7o_16"><p id="-512279951#-mowv7o_20">Conhecimento b&aacute;sico de Java</p></li><li class="list-item" id="-512279951#-mowv7o_17"><p id="-512279951#-mowv7o_21">MongoDB instalado localmente (porta padr&atilde;o 27017)</p></li><li class="list-item" id="-512279951#-mowv7o_18"><p id="-512279951#-mowv7o_22">Java Development Kit (JDK) 8 ou superior</p></li><li class="list-item" id="-512279951#-mowv7o_19"><p id="-512279951#-mowv7o_23">Maven ou Gradle para gerenciamento de depend&ecirc;ncias</p></li></ul></section></section><section class="detached"><h2 id="-512279951#passo-1-configurar-seu-projeto" data-toc="passo-1-configurar-seu-projeto#starter-topic.md-passo-1-configurar-seu-projeto">Passo 1: Configurar Seu Projeto</h2><p id="-512279951#-mowv7o_24">Primeiro, adicione o driver Java do MongoDB ao seu projeto:</p><p id="-512279951#-mowv7o_25"><span class="control" id="-512279951#-mowv7o_29">Maven:</span></p><div class="detached code-block" id="-512279951#-mowv7o_26"><pre><code class="language-markup">&lt;dependency&gt;
+    &lt;groupId&gt;org.mongodb&lt;/groupId&gt;
+    &lt;artifactId&gt;mongodb-driver-sync&lt;/artifactId&gt;
+    &lt;version&gt;4.9.0&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></div><p id="-512279951#-mowv7o_27"><span class="control" id="-512279951#-mowv7o_30">Gradle:</span></p><div class="detached code-block" id="-512279951#-mowv7o_28"><pre><code class="language-groovy">implementation 'org.mongodb:mongodb-driver-sync:4.9.0'</code></pre></div></section><section class="detached"><h2 id="-512279951#passo-2-conectar-ao-mongodb" data-toc="passo-2-conectar-ao-mongodb#starter-topic.md-passo-2-conectar-ao-mongodb">Passo 2: Conectar ao MongoDB</h2><p id="-512279951#-mowv7o_31">Crie uma nova classe Java <span class="inline-code" id="-512279951#-mowv7o_33">MongoCRUD.java</span> e adicione o c&oacute;digo de conex&atilde;o:</p><div class="detached code-block" id="-512279951#-mowv7o_32"><pre><code class="language-java">import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+
+public class MongoCRUD {
+    private MongoClient mongoClient;
+    
+    public MongoCRUD() {
+        // Conectar ao MongoDB rodando localmente
+        this.mongoClient = MongoClients.create(&quot;mongodb://localhost:27017&quot;);
+        System.out.println(&quot;Conectado ao MongoDB com sucesso!&quot;);
+    }
+    
+    public void close() {
+        mongoClient.close();
+        System.out.println(&quot;Conexão encerrada.&quot;);
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            // Nossas operações virão aqui
+        } finally {
+            mongoApp.close();
+        }
+    }
+}</code></pre></div></section><section class="detached"><h2 id="-512279951#passo-3-criar-documentos" data-toc="passo-3-criar-documentos#starter-topic.md-passo-3-criar-documentos">Passo 3: Criar Documentos</h2><p id="-512279951#-mowv7o_34">Vamos adicionar um m&eacute;todo para inserir dados na cole&ccedil;&atilde;o &quot;pessoas&quot;:</p><div class="detached code-block" id="-512279951#-mowv7o_35"><pre><code class="language-java">import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+import java.util.Arrays;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    private MongoDatabase database;
+    private MongoCollection&lt;Document&gt; collection;
+    
+    public MongoCRUD() {
+        this.mongoClient = MongoClients.create(&quot;mongodb://localhost:27017&quot;);
+        this.database = mongoClient.getDatabase(&quot;lab_mongodb&quot;);
+        this.collection = database.getCollection(&quot;pessoas&quot;);
+    }
+    
+    public void criarDocumentos() {
+        System.out.println(&quot;\n=== Criando Documentos ===&quot;);
+        
+        // Inserção de documento único
+        Document pessoa1 = new Document(&quot;nome&quot;, &quot;João Silva&quot;)
+                .append(&quot;idade&quot;, 28)
+                .append(&quot;cidade&quot;, &quot;São Paulo&quot;);
+        collection.insertOne(pessoa1);
+        System.out.println(&quot;Documento 1 inserido: &quot; + pessoa1);
+        
+        // Inserção de múltiplos documentos
+        Document pessoa2 = new Document(&quot;nome&quot;, &quot;Maria Oliveira&quot;)
+                .append(&quot;idade&quot;, 32)
+                .append(&quot;cidade&quot;, &quot;Rio de Janeiro&quot;);
+                
+        Document pessoa3 = new Document(&quot;nome&quot;, &quot;Carlos Souza&quot;)
+                .append(&quot;idade&quot;, 25)
+                .append(&quot;cidade&quot;, &quot;Belo Horizonte&quot;);
+                
+        collection.insertMany(Arrays.asList(pessoa2, pessoa3));
+        System.out.println(&quot;Mais 2 documentos inseridos&quot;);
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            mongoApp.criarDocumentos();
+        } finally {
+            mongoApp.close();
+        }
+    }
+}</code></pre></div></section><section class="detached"><h2 id="-512279951#passo-4-ler-documentos" data-toc="passo-4-ler-documentos#starter-topic.md-passo-4-ler-documentos">Passo 4: Ler Documentos</h2><p id="-512279951#-mowv7o_36">Adicione capacidades de consulta &agrave; sua aplica&ccedil;&atilde;o:</p><div class="detached code-block" id="-512279951#-mowv7o_37"><pre><code class="language-java">import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Projections;
+import org.bson.conversions.Bson;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    public void lerDocumentos() {
+        System.out.println(&quot;\n=== Lendo Documentos ===&quot;);
+        
+        // 1. Encontrar todos os documentos
+        System.out.println(&quot;Todos os documentos:&quot;);
+        collection.find().forEach(doc -&gt; System.out.println(doc.toJson()));
+        
+        // 2. Encontrar com filtro (idade &gt; 25)
+        System.out.println(&quot;\nPessoas com mais de 25 anos:&quot;);
+        Bson filtroIdade = Filters.gt(&quot;idade&quot;, 25);
+        collection.find(filtroIdade)
+                 .forEach(doc -&gt; System.out.println(doc.toJson()));
+        
+        // 3. Projeção (apenas nome e cidade)
+        System.out.println(&quot;\nApenas nomes e cidades:&quot;);
+        Bson projecao = Projections.fields(
+            Projections.include(&quot;nome&quot;, &quot;cidade&quot;),
+            Projections.excludeId()
+        );
+        collection.find()
+                 .projection(projecao)
+                 .forEach(doc -&gt; System.out.println(doc.toJson()));
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            mongoApp.criarDocumentos();
+            mongoApp.lerDocumentos();
+        } finally {
+            mongoApp.close();
+        }
+    }
+}</code></pre></div></section><section class="detached"><h2 id="-512279951#passo-5-atualizar-documentos" data-toc="passo-5-atualizar-documentos#starter-topic.md-passo-5-atualizar-documentos">Passo 5: Atualizar Documentos</h2><p id="-512279951#-mowv7o_38">Implemente atualiza&ccedil;&otilde;es de documentos:</p><div class="detached code-block" id="-512279951#-mowv7o_39"><pre><code class="language-java">import com.mongodb.client.model.Updates;
+import com.mongodb.client.result.UpdateResult;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    public void atualizarDocumentos() {
+        System.out.println(&quot;\n=== Atualizando Documentos ===&quot;);
+        
+        // 1. Atualizar um documento
+        Bson filtro = Filters.eq(&quot;nome&quot;, &quot;João Silva&quot;);
+        Bson atualizacao = Updates.set(&quot;profissao&quot;, &quot;Engenheiro&quot;);
+        UpdateResult resultado = collection.updateOne(filtro, atualizacao);
+        System.out.println(resultado.getModifiedCount() + &quot; documento(s) modificado(s)&quot;);
+        
+        // 2. Atualizar múltiplos documentos
+        Bson filtroIdade = Filters.gt(&quot;idade&quot;, 25);
+        Bson atualizacaoSalario = Updates.inc(&quot;salario&quot;, 500.00);
+        UpdateResult resultadoMultiplo = collection.updateMany(filtroIdade, atualizacaoSalario);
+        System.out.println(resultadoMultiplo.getModifiedCount() + &quot; documentos atualizados com aumento salarial&quot;);
+        
+        // 3. Atualização complexa (definir se não existir)
+        Bson atualizacaoComplexa = Updates.combine(
+            Updates.set(&quot;profissao&quot;, &quot;Desenvolvedor&quot;),
+            Updates.setOnInsert(&quot;data_criacao&quot;, new java.util.Date())
+        );
+        collection.updateOne(Filters.eq(&quot;nome&quot;, &quot;Carlos Souza&quot;), atualizacaoComplexa);
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            mongoApp.criarDocumentos();
+            mongoApp.lerDocumentos();
+            mongoApp.atualizarDocumentos();
+            mongoApp.lerDocumentos(); // Verificar atualizações
+        } finally {
+            mongoApp.close();
+        }
+    }
+}</code></pre></div></section><section class="detached"><h2 id="-512279951#passo-6-deletar-documentos" data-toc="passo-6-deletar-documentos#starter-topic.md-passo-6-deletar-documentos">Passo 6: Deletar Documentos</h2><p id="-512279951#-mowv7o_40">Adicione m&eacute;todos de exclus&atilde;o:</p><div class="detached code-block" id="-512279951#-mowv7o_41"><pre><code class="language-java">import com.mongodb.client.result.DeleteResult;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    public void deletarDocumentos() {
+        System.out.println(&quot;\n=== Deletando Documentos ===&quot;);
+        
+        // 1. Deletar um documento
+        Bson filtro = Filters.eq(&quot;nome&quot;, &quot;Carlos Souza&quot;);
+        DeleteResult resultado = collection.deleteOne(filtro);
+        System.out.println(resultado.getDeletedCount() + &quot; documento(s) deletado(s)&quot;);
+        
+        // 2. Deletar múltiplos documentos
+        Bson filtroIdade = Filters.lt(&quot;idade&quot;, 30);
+        DeleteResult resultadoMultiplo = collection.deleteMany(filtroIdade);
+        System.out.println(resultadoMultiplo.getDeletedCount() + &quot; documentos deletados onde idade &lt; 30&quot;);
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            mongoApp.criarDocumentos();
+            mongoApp.lerDocumentos();
+            mongoApp.atualizarDocumentos();
+            mongoApp.deletarDocumentos();
+            mongoApp.lerDocumentos(); // Verificar exclusões
+        } finally {
+            mongoApp.close();
+        }
+    }
+}</code></pre></div></section><section class="detached"><h2 id="-512279951#passo-7-recursos-avan-ados" data-toc="passo-7-recursos-avan-ados#starter-topic.md-passo-7-recursos-avan-ados">Passo 7: Recursos Avan&ccedil;ados</h2><section class="detached"><h3 id="-512279951#indexa-o" data-toc="indexa-o#starter-topic.md-indexa-o">Indexa&ccedil;&atilde;o</h3><div class="detached code-block" id="-512279951#-mowv7o_44"><pre><code class="language-java">import com.mongodb.client.model.Indexes;
+import com.mongodb.client.model.IndexOptions;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    public void gerenciarIndices() {
+        System.out.println(&quot;\n=== Gerenciando Índices ===&quot;);
+        
+        // 1. Criar índice único no nome
+        collection.createIndex(
+            Indexes.ascending(&quot;nome&quot;),
+            new IndexOptions().unique(true)
+        );
+        System.out.println(&quot;Índice único criado em 'nome'&quot;);
+        
+        // 2. Criar índice composto
+        collection.createIndex(
+            Indexes.compoundIndex(
+                Indexes.ascending(&quot;cidade&quot;),
+                Indexes.descending(&quot;idade&quot;)
+            )
+        );
+        System.out.println(&quot;Índice composto criado em cidade e idade&quot;);
+        
+        // 3. Listar todos os índices
+        System.out.println(&quot;\nÍndices atuais:&quot;);
+        collection.listIndexes().forEach(idx -&gt; System.out.println(idx.toJson()));
+    }
+}</code></pre></div></section><section class="detached"><h3 id="-512279951#agrega-o" data-toc="agrega-o#starter-topic.md-agrega-o">Agrega&ccedil;&atilde;o</h3><div class="detached code-block" id="-512279951#-mowv7o_45"><pre><code class="language-java">import com.mongodb.client.model.Accumulators;
+import com.mongodb.client.model.Aggregates;
+import com.mongodb.client.model.Sorts;
+
+public class MongoCRUD {
+    // ... código anterior ...
+    
+    public void exemplosAgregacao() {
+        System.out.println(&quot;\n=== Exemplos de Agregação ===&quot;);
+        
+        // 1. Média de idade por cidade
+        System.out.println(&quot;\nMédia de idade por cidade:&quot;);
+        collection.aggregate(Arrays.asList(
+            Aggregates.group(&quot;$cidade&quot;, 
+                Accumulators.avg(&quot;mediaIdade&quot;, &quot;$idade&quot;),
+                Accumulators.sum(&quot;contagem&quot;, 1)
+            ),
+            Aggregates.sort(Sorts.ascending(&quot;_id&quot;))
+        ).forEach(doc -&gt; System.out.println(doc.toJson()));
+        
+        // 2. Estatísticas salariais por profissão
+        System.out.println(&quot;\nEstatísticas salariais por profissão:&quot;);
+        collection.aggregate(Arrays.asList(
+            Aggregates.group(&quot;$profissao&quot;,
+                Accumulators.avg(&quot;salarioMedio&quot;, &quot;$salario&quot;),
+                Accumulators.min(&quot;salarioMinimo&quot;, &quot;$salario&quot;),
+                Accumulators.max(&quot;salarioMaximo&quot;, &quot;$salario&quot;)
+            ),
+            Aggregates.sort(Sorts.descending(&quot;salarioMedio&quot;))
+        )).forEach(doc -&gt; System.out.println(doc.toJson()));
+    }
+}</code></pre></div></section></section><section class="detached"><h2 id="-512279951#exemplo-completo" data-toc="exemplo-completo#starter-topic.md-exemplo-completo">Exemplo Completo</h2><p id="-512279951#-mowv7o_46">Aqui est&aacute; a classe completa com todas as opera&ccedil;&otilde;es:</p><div class="detached code-block" id="-512279951#-mowv7o_47"><pre><code class="language-java">import com.mongodb.client.*;
+import com.mongodb.client.model.*;
+import com.mongodb.client.result.*;
+import org.bson.Document;
+import org.bson.conversions.Bson;
+import java.util.Arrays;
+
+public class MongoCRUD {
+    private MongoClient mongoClient;
+    private MongoDatabase database;
+    private MongoCollection&lt;Document&gt; collection;
+    
+    public MongoCRUD() {
+        this.mongoClient = MongoClients.create(&quot;mongodb://localhost:27017&quot;);
+        this.database = mongoClient.getDatabase(&quot;lab_mongodb&quot;);
+        this.collection = database.getCollection(&quot;pessoas&quot;);
+        System.out.println(&quot;Conexão com MongoDB estabelecida&quot;);
+    }
+    
+    // Todos os métodos que criamos acima...
+    public void criarDocumentos() { /* ... */ }
+    public void lerDocumentos() { /* ... */ }
+    public void atualizarDocumentos() { /* ... */ }
+    public void deletarDocumentos() { /* ... */ }
+    public void gerenciarIndices() { /* ... */ }
+    public void exemplosAgregacao() { /* ... */ }
+    
+    public void close() {
+        mongoClient.close();
+        System.out.println(&quot;Conexão encerrada&quot;);
+    }
+    
+    public static void main(String[] args) {
+        MongoCRUD mongoApp = new MongoCRUD();
+        try {
+            mongoApp.criarDocumentos();
+            mongoApp.lerDocumentos();
+            mongoApp.atualizarDocumentos();
+            mongoApp.lerDocumentos();
+            mongoApp.deletarDocumentos();
+            mongoApp.lerDocumentos();
+            mongoApp.gerenciarIndices();
+            mongoApp.exemplosAgregacao();
+        } finally {
+            mongoApp.close();
+        }
+    }
+}</code></pre></div></section><section class="detached"><h2 id="-512279951#boas-pr-ticas" data-toc="boas-pr-ticas#starter-topic.md-boas-pr-ticas">Boas Pr&aacute;ticas</h2><ol class="list list-decimal" id="-512279951#-mowv7o_48" type="1" start="1"><li class="list-item" id="-512279951#-mowv7o_49"><p id="-512279951#-mowv7o_54"><span class="control" id="-512279951#-mowv7o_55">Gerenciamento de Conex&atilde;o</span>: Sempre feche seu MongoClient quando terminar</p></li><li class="list-item" id="-512279951#-mowv7o_50"><p id="-512279951#-mowv7o_56"><span class="control" id="-512279951#-mowv7o_57">Opera&ccedil;&otilde;es em Massa</span>: Para m&uacute;ltiplas escritas, use opera&ccedil;&otilde;es em massa</p></li><li class="list-item" id="-512279951#-mowv7o_51"><p id="-512279951#-mowv7o_58"><span class="control" id="-512279951#-mowv7o_59">Proje&ccedil;&otilde;es</span>: Recupere apenas os campos que voc&ecirc; precisa</p></li><li class="list-item" id="-512279951#-mowv7o_52"><p id="-512279951#-mowv7o_60"><span class="control" id="-512279951#-mowv7o_61">Tratamento de Erros</span>: Adicione blocos try-catch adequados em c&oacute;digo de produ&ccedil;&atilde;o</p></li><li class="list-item" id="-512279951#-mowv7o_53"><p id="-512279951#-mowv7o_62"><span class="control" id="-512279951#-mowv7o_63">Indexa&ccedil;&atilde;o</span>: Crie &iacute;ndices para seus padr&otilde;es de consulta comuns</p></li></ol></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-732844359">Como Tudo Funciona</h1><p id="-732844359#-snxy3g_3">Este tutorial explica passo a passo como realizar opera&ccedil;&otilde;es CRUD (Create, Read, Update, Delete) no MongoDB usando Java, desde a conex&atilde;o at&eacute; consultas avan&ccedil;adas com agrega&ccedil;&atilde;o.</p><section class="detached"><h2 id="-732844359#1-conex-o-com-o-mongodb" data-toc="1-conex-o-com-o-mongodb#Explicacao.md-1-conex-o-com-o-mongodb">1. Conex&atilde;o com o MongoDB</h2><section class="detached"><h3 id="-732844359#como-funciona_1" data-toc="como-funciona_1#Explicacao.md-como-funciona_1">Como Funciona?</h3><p id="-732844359#-snxy3g_17">O MongoDB usa o MongoClient para gerenciar conex&otilde;es. Quando voc&ecirc; cria uma inst&acirc;ncia dele, ele abre um pool de conex&otilde;es (conex&otilde;es reutiliz&aacute;veis para melhor desempenho).</p></section><section class="detached"><h3 id="-732844359#c-digo-explicado_1" data-toc="c-digo-explicado_1#Explicacao.md-c-digo-explicado_1">C&oacute;digo Explicado</h3><div class="detached code-block" id="-732844359#-snxy3g_20"><pre><code class="language-java">MongoClient mongoClient = MongoClients.create(&quot;mongodb://localhost:27017&quot;);
+MongoDatabase database = mongoClient.getDatabase(&quot;lab_mongodb&quot;);
+MongoCollection&lt;Document&gt; collection = database.getCollection(&quot;pessoas&quot;);</code></pre></div><ul class="list" id="-732844359#-snxy3g_21" start="1"><li class="list-item" id="-732844359#-snxy3g_24"><p id="-732844359#-snxy3g_27"><span class="control" id="-732844359#-snxy3g_28">MongoClients.create()</span> - Conecta ao servidor MongoDB (rodando em localhost:27017)</p></li><li class="list-item" id="-732844359#-snxy3g_25"><p id="-732844359#-snxy3g_29"><span class="control" id="-732844359#-snxy3g_30">getDatabase()</span> - Pega (ou cria, se n&atilde;o existir) o banco de dados lab_mongodb</p></li><li class="list-item" id="-732844359#-snxy3g_26"><p id="-732844359#-snxy3g_31"><span class="control" id="-732844359#-snxy3g_32">getCollection()</span> - Acessa (ou cria) a cole&ccedil;&atilde;o pessoas</p></li></ul><p id="-732844359#-snxy3g_22">Importante: Sempre feche a conex&atilde;o com mongoClient.close() para evitar vazamentos.</p></section></section><section class="detached"><h2 id="-732844359#2-inserindo-dados-create" data-toc="2-inserindo-dados-create#Explicacao.md-2-inserindo-dados-create">2. Inserindo Dados (Create)</h2><section class="detached"><h3 id="-732844359#como-funciona_2" data-toc="como-funciona_2#Explicacao.md-como-funciona_2">Como Funciona?</h3><ul class="list" id="-732844359#-snxy3g_38" start="1"><li class="list-item" id="-732844359#-snxy3g_40"><p id="-732844359#-snxy3g_42">insertOne() - Insere um &uacute;nico documento (registro)</p></li><li class="list-item" id="-732844359#-snxy3g_41"><p id="-732844359#-snxy3g_43">insertMany() - Insere v&aacute;rios documentos de uma vez (mais eficiente)</p></li></ul></section><section class="detached"><h3 id="-732844359#c-digo-explicado_2" data-toc="c-digo-explicado_2#Explicacao.md-c-digo-explicado_2">C&oacute;digo Explicado</h3><div class="detached code-block" id="-732844359#-snxy3g_45"><pre><code class="language-java">// Inserindo um documento
+Document pessoa = new Document(&quot;nome&quot;, &quot;João Silva&quot;)
+    .append(&quot;idade&quot;, 30)
+    .append(&quot;cidade&quot;, &quot;São Paulo&quot;);
+
+collection.insertOne(pessoa);
+
+// Inserindo vários documentos
+List&lt;Document&gt; pessoas = Arrays.asList(
+    new Document(&quot;nome&quot;, &quot;Maria&quot;).append(&quot;idade&quot;, 25),
+    new Document(&quot;nome&quot;, &quot;Carlos&quot;).append(&quot;idade&quot;, 40)
+);
+
+collection.insertMany(pessoas);</code></pre></div><ul class="list" id="-732844359#-snxy3g_46" start="1"><li class="list-item" id="-732844359#-snxy3g_48"><p id="-732844359#-snxy3g_50">Document - Representa um registro no MongoDB (como um JSON)</p></li><li class="list-item" id="-732844359#-snxy3g_49"><p id="-732844359#-snxy3g_51">append() - Adiciona campos ao documento</p></li></ul></section></section><section class="detached"><h2 id="-732844359#3-consultando-dados-read" data-toc="3-consultando-dados-read#Explicacao.md-3-consultando-dados-read">3. Consultando Dados (Read)</h2><section class="detached"><h3 id="-732844359#como-funciona_3" data-toc="como-funciona_3#Explicacao.md-como-funciona_3">Como Funciona?</h3><ul class="list" id="-732844359#-snxy3g_58" start="1"><li class="list-item" id="-732844359#-snxy3g_60"><p id="-732844359#-snxy3g_62">find() - Retorna todos os documentos</p></li><li class="list-item" id="-732844359#-snxy3g_61"><p id="-732844359#-snxy3g_63">find(Filtro) - Retorna apenas documentos que atendem a um crit&eacute;rio</p></li></ul></section><section class="detached"><h3 id="-732844359#filtros-comuns" data-toc="filtros-comuns#Explicacao.md-filtros-comuns">Filtros Comuns</h3><div class="table-wrapper detached"><table id="-732844359#-snxy3g_65"><tr class="header-row" id="-732844359#-snxy3g_67"><th id="-732844359#-snxy3g_72"><p>M&eacute;todo</p></th><th id="-732844359#-snxy3g_73"><p>Exemplo</p></th><th id="-732844359#-snxy3g_74"><p>Descri&ccedil;&atilde;o</p></th></tr><tr class="" id="-732844359#-snxy3g_68"><td id="-732844359#-snxy3g_75"><p>eq</p></td><td id="-732844359#-snxy3g_76"><p>Filters.eq(&quot;nome&quot;, &quot;Jo&atilde;o&quot;)</p></td><td id="-732844359#-snxy3g_77"><p>Igual a &quot;Jo&atilde;o&quot;</p></td></tr><tr class="" id="-732844359#-snxy3g_69"><td id="-732844359#-snxy3g_78"><p>gt</p></td><td id="-732844359#-snxy3g_79"><p>Filters.gt(&quot;idade&quot;, 25)</p></td><td id="-732844359#-snxy3g_80"><p>Maior que 25</p></td></tr><tr class="" id="-732844359#-snxy3g_70"><td id="-732844359#-snxy3g_81"><p>lt</p></td><td id="-732844359#-snxy3g_82"><p>Filters.lt(&quot;idade&quot;, 30)</p></td><td id="-732844359#-snxy3g_83"><p>Menor que 30</p></td></tr><tr class="" id="-732844359#-snxy3g_71"><td id="-732844359#-snxy3g_84"><p>and</p></td><td id="-732844359#-snxy3g_85"><p>Filters.and(eq, gt)</p></td><td id="-732844359#-snxy3g_86"><p>Combina filtros</p></td></tr></table></div></section><section class="detached"><h3 id="-732844359#c-digo-explicado_3" data-toc="c-digo-explicado_3#Explicacao.md-c-digo-explicado_3">C&oacute;digo Explicado</h3><div class="detached code-block" id="-732844359#-snxy3g_88"><pre><code class="language-java">// Busca todos
+collection.find().forEach(doc -&gt; System.out.println(doc.toJson()));
+
+// Busca com filtro (idade &gt; 25)
+Bson filtro = Filters.gt(&quot;idade&quot;, 25);
+collection.find(filtro).forEach(doc -&gt; System.out.println(doc));</code></pre></div></section></section><section class="detached"><h2 id="-732844359#4-atualizando-dados-update" data-toc="4-atualizando-dados-update#Explicacao.md-4-atualizando-dados-update">4. Atualizando Dados (Update)</h2><section class="detached"><h3 id="-732844359#como-funciona_4" data-toc="como-funciona_4#Explicacao.md-como-funciona_4">Como Funciona?</h3><ul class="list" id="-732844359#-snxy3g_96" start="1"><li class="list-item" id="-732844359#-snxy3g_98"><p id="-732844359#-snxy3g_100">updateOne() - Atualiza o primeiro documento que bate com o filtro</p></li><li class="list-item" id="-732844359#-snxy3g_99"><p id="-732844359#-snxy3g_101">updateMany() - Atualiza todos os documentos que batem com o filtro</p></li></ul></section><section class="detached"><h3 id="-732844359#opera-es-de-atualiza-o" data-toc="opera-es-de-atualiza-o#Explicacao.md-opera-es-de-atualiza-o">Opera&ccedil;&otilde;es de Atualiza&ccedil;&atilde;o</h3><div class="table-wrapper detached"><table id="-732844359#-snxy3g_103"><tr class="header-row" id="-732844359#-snxy3g_105"><th id="-732844359#-snxy3g_109"><p>M&eacute;todo</p></th><th id="-732844359#-snxy3g_110"><p>Exemplo</p></th><th id="-732844359#-snxy3g_111"><p>Descri&ccedil;&atilde;o</p></th></tr><tr class="" id="-732844359#-snxy3g_106"><td id="-732844359#-snxy3g_112"><p>set</p></td><td id="-732844359#-snxy3g_113"><p>Updates.set(&quot;idade&quot;, 31)</p></td><td id="-732844359#-snxy3g_114"><p>Altera o valor</p></td></tr><tr class="" id="-732844359#-snxy3g_107"><td id="-732844359#-snxy3g_115"><p>inc</p></td><td id="-732844359#-snxy3g_116"><p>Updates.inc(&quot;idade&quot;, 1)</p></td><td id="-732844359#-snxy3g_117"><p>Incrementa (+1)</p></td></tr><tr class="" id="-732844359#-snxy3g_108"><td id="-732844359#-snxy3g_118"><p>unset</p></td><td id="-732844359#-snxy3g_119"><p>Updates.unset(&quot;cidade&quot;)</p></td><td id="-732844359#-snxy3g_120"><p>Remove o campo</p></td></tr></table></div></section><section class="detached"><h3 id="-732844359#c-digo-explicado" data-toc="c-digo-explicado#Explicacao.md-c-digo-explicado">C&oacute;digo Explicado</h3><div class="detached code-block" id="-732844359#-snxy3g_122"><pre><code class="language-java">// Atualiza o salário do João
+Bson filtro = Filters.eq(&quot;nome&quot;, &quot;João Silva&quot;);
+Bson update = Updates.set(&quot;salario&quot;, 5000.00);
+collection.updateOne(filtro, update);
+
+// Aumenta salário de todos com +500
+Bson filtroGeral = Filters.gt(&quot;salario&quot;, 3000);
+Bson updateGeral = Updates.inc(&quot;salario&quot;, 500);
+collection.updateMany(filtroGeral, updateGeral);</code></pre></div></section></section><section class="detached"><h2 id="-732844359#5-deletando-dados-delete" data-toc="5-deletando-dados-delete#Explicacao.md-5-deletando-dados-delete">5. Deletando Dados (Delete)</h2><section class="detached"><h3 id="-732844359#como-funciona_5" data-toc="como-funciona_5#Explicacao.md-como-funciona_5">Como Funciona?</h3><ul class="list" id="-732844359#-snxy3g_129" start="1"><li class="list-item" id="-732844359#-snxy3g_131"><p id="-732844359#-snxy3g_133">deleteOne() - Remove o primeiro documento que bate com o filtro</p></li><li class="list-item" id="-732844359#-snxy3g_132"><p id="-732844359#-snxy3g_134">deleteMany() - Remove todos os documentos que batem com o filtro</p></li></ul></section><section class="detached"><h3 id="-732844359#c-digo-explicado_4" data-toc="c-digo-explicado_4#Explicacao.md-c-digo-explicado_4">C&oacute;digo Explicado</h3><div class="detached code-block" id="-732844359#-snxy3g_136"><pre><code class="language-java">// Deleta o João
+collection.deleteOne(Filters.eq(&quot;nome&quot;, &quot;João Silva&quot;));
+
+// Deleta todos com salário &lt; 3000
+collection.deleteMany(Filters.lt(&quot;salario&quot;, 3000));</code></pre></div></section></section><section class="detached"><h2 id="-732844359#6-ndices-para-consultas-r-pidas" data-toc="6-ndices-para-consultas-r-pidas#Explicacao.md-6-ndices-para-consultas-r-pidas">6. &Iacute;ndices (Para Consultas R&aacute;pidas)</h2><section class="detached"><h3 id="-732844359#como-funciona_6" data-toc="como-funciona_6#Explicacao.md-como-funciona_6">Como Funciona?</h3><p id="-732844359#-snxy3g_144">&Iacute;ndices aceleram buscas, mas ocupam espa&ccedil;o extra.</p></section><section class="detached"><h3 id="-732844359#tipos-de-ndices" data-toc="tipos-de-ndices#Explicacao.md-tipos-de-ndices">Tipos de &Iacute;ndices</h3><ul class="list" id="-732844359#-snxy3g_147" start="1"><li class="list-item" id="-732844359#-snxy3g_149"><p id="-732844359#-snxy3g_152">Simples - Indexes.ascending(&quot;nome&quot;)</p></li><li class="list-item" id="-732844359#-snxy3g_150"><p id="-732844359#-snxy3g_153">&Uacute;nico - new IndexOptions().unique(true)</p></li><li class="list-item" id="-732844359#-snxy3g_151"><p id="-732844359#-snxy3g_154">Composto - Indexes.compoundIndex(asc, desc)</p></li></ul></section><section class="detached"><h3 id="-732844359#c-digo-explicado_5" data-toc="c-digo-explicado_5#Explicacao.md-c-digo-explicado_5">C&oacute;digo Explicado</h3><div class="detached code-block" id="-732844359#-snxy3g_156"><pre><code class="language-java">// Cria índice único no nome
+collection.createIndex(
+    Indexes.ascending(&quot;nome&quot;),
+    new IndexOptions().unique(true)
+);
+
+// Cria índice composto (cidade + idade)
+collection.createIndex(
+    Indexes.compoundIndex(
+        Indexes.ascending(&quot;cidade&quot;),
+        Indexes.descending(&quot;idade&quot;)
+    )
+);</code></pre></div></section></section><section class="detached"><h2 id="-732844359#7-agrega-es-an-lise-de-dados" data-toc="7-agrega-es-an-lise-de-dados#Explicacao.md-7-agrega-es-an-lise-de-dados">7. Agrega&ccedil;&otilde;es (An&aacute;lise de Dados)</h2><section class="detached"><h3 id="-732844359#como-funciona" data-toc="como-funciona#Explicacao.md-como-funciona">Como Funciona?</h3><p id="-732844359#-snxy3g_164">Agrega&ccedil;&otilde;es permitem filtrar, agrupar e calcular dados em pipelines.</p></section><section class="detached"><h3 id="-732844359#opera-es-comuns" data-toc="opera-es-comuns#Explicacao.md-opera-es-comuns">Opera&ccedil;&otilde;es Comuns</h3><div class="table-wrapper detached"><table id="-732844359#-snxy3g_167"><tr class="header-row" id="-732844359#-snxy3g_169"><th id="-732844359#-snxy3g_173"><p>M&eacute;todo</p></th><th id="-732844359#-snxy3g_174"><p>Exemplo</p></th><th id="-732844359#-snxy3g_175"><p>Descri&ccedil;&atilde;o</p></th></tr><tr class="" id="-732844359#-snxy3g_170"><td id="-732844359#-snxy3g_176"><p>group</p></td><td id="-732844359#-snxy3g_177"><p>Aggregates.group(&quot;$cidade&quot;)</p></td><td id="-732844359#-snxy3g_178"><p>Agrupa por cidade</p></td></tr><tr class="" id="-732844359#-snxy3g_171"><td id="-732844359#-snxy3g_179"><p>avg</p></td><td id="-732844359#-snxy3g_180"><p>Accumulators.avg(&quot;media&quot;, &quot;$salario&quot;)</p></td><td id="-732844359#-snxy3g_181"><p>Calcula m&eacute;dia</p></td></tr><tr class="" id="-732844359#-snxy3g_172"><td id="-732844359#-snxy3g_182"><p>sort</p></td><td id="-732844359#-snxy3g_183"><p>Aggregates.sort(Sorts.descending(&quot;idade&quot;))</p></td><td id="-732844359#-snxy3g_184"><p>Ordena resultados</p></td></tr></table></div></section><section class="detached"><h3 id="-732844359#c-digo-explicado_6" data-toc="c-digo-explicado_6#Explicacao.md-c-digo-explicado_6">C&oacute;digo Explicado</h3><div class="detached code-block" id="-732844359#-snxy3g_186"><pre><code class="language-java">// Média salarial por profissão
+collection.aggregate(Arrays.asList(
+    Aggregates.group(&quot;$profissao&quot;, 
+        Accumulators.avg(&quot;mediaSalarial&quot;, &quot;$salario&quot;)
+    ),
+    Aggregates.sort(Sorts.descending(&quot;mediaSalarial&quot;))
+).forEach(doc -&gt; System.out.println(doc));</code></pre></div></section></section><section class="detached"><h2 id="-732844359#conclus-o" data-toc="conclus-o#Explicacao.md-conclus-o">Conclus&atilde;o</h2><p id="-732844359#-snxy3g_189">Agora voc&ecirc; sabe:</p><ul class="list" id="-732844359#-snxy3g_190" start="1"><li class="list-item" id="-732844359#-snxy3g_195"><p id="-732844359#-snxy3g_199">Como conectar Java ao MongoDB</p></li><li class="list-item" id="-732844359#-snxy3g_196"><p id="-732844359#-snxy3g_200">Como fazer CRUD (inserir, ler, atualizar, deletar)</p></li><li class="list-item" id="-732844359#-snxy3g_197"><p id="-732844359#-snxy3g_201">Como acelerar consultas com &iacute;ndices</p></li><li class="list-item" id="-732844359#-snxy3g_198"><p id="-732844359#-snxy3g_202">Como analisar dados com agrega&ccedil;&otilde;es</p></li></ul><p id="-732844359#-snxy3g_191">Pr&oacute;ximos passos:</p><ul class="list" id="-732844359#-snxy3g_192" start="1"><li class="list-item" id="-732844359#-snxy3g_203"><p id="-732844359#-snxy3g_206">Transa&ccedil;&otilde;es (para opera&ccedil;&otilde;es complexas)</p></li><li class="list-item" id="-732844359#-snxy3g_204"><p id="-732844359#-snxy3g_207">Change Streams (monitorar altera&ccedil;&otilde;es em tempo real)</p></li><li class="list-item" id="-732844359#-snxy3g_205"><p id="-732844359#-snxy3g_208">Driver Reativo (para programa&ccedil;&atilde;o ass&iacute;ncrona)</p></li></ul><p id="-732844359#-snxy3g_193">Dica: Experimente modificar os exemplos e criar suas pr&oacute;prias consultas!</p></section></article></div></section></div></body></html>
